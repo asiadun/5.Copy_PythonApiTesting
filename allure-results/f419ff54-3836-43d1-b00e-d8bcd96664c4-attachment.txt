@@ -1,0 +1,9 @@
+[32mINFO    [0m foo:test_createUserData.py:29 Testing data is prepared...
+[32mINFO    [0m foo:test_createUserData.py:30 CREATE USER WITH DATA
+[32mINFO    [0m foo:test_createUserData.py:31 {'name': 'f1t1MJcSATdU2IBkhd49', 'job': 'qYbPCftv9uo6bd9AcRI0'}
+[32mINFO    [0m foo:test_createUserData.py:33 WHEN performing API call
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:971 Starting new HTTPS connection (1): reqres.in:443
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:452 https://reqres.in:443 "POST /api/users HTTP/1.1" 201 110
+[32mINFO    [0m foo:test_createUserData.py:36 THEN Verify that response code is equal to 201
+[32mINFO    [0m foo:test_createUserData.py:38 AND Verify that name in response is equal to f1t1MJcSATdU2IBkhd49
+[32mINFO    [0m foo:test_createUserData.py:40 AND Verify that job in response is equal to qYbPCftv9uo6bd9AcRI0

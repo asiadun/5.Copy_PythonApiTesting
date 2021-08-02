@@ -6,15 +6,5 @@ pipeline {
                 // 
             }
         }
-        stage('Test') { 
-            steps {
-                // 
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                // 
-            }
-        }
     }
 }
