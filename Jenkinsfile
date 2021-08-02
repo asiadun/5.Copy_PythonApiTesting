@@ -12,5 +12,18 @@ pipeline {
                 bat 'py.test --alluredir=allure-results -s -q'
             }
         }
+        stage('Deploy') {
+            steps {
+                script {
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [[path: 'allure-results']]
+                    ])
+                }
+            }   
+        }
     }
 }
