@@ -9,13 +9,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing'
-                py.test --alluredir=allure-results -s -q
+                sh 'py.test /test_allure.py --alluredir /tmp/allure-results'                
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying'
+                sh 'py.test --alluredir=allure-results -s -q'
             }
         }
     }
