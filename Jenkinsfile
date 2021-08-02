@@ -10,6 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing'
+                py.test --alluredir=allure-results -s -q
             }
         }
         stage('Deploy') {
