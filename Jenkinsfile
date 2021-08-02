@@ -12,7 +12,7 @@ pipeline {
                 bat 'py.test --alluredir=allure-results -s -q'
             }
         }
-        stage('Deploy') {
+        stage('Deploy_allure') {
             steps {
                 script {
                     allure([
