@@ -4,15 +4,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh 'py.test /test_allure.py --alluredir /tmp/allure-results'                
+                bat 'pip install -r requirements.txt'
             }
         }
         stage('Deploy') {
+            steps {
+                bat 'py.test --alluredir=allure-results -s -q'
+            }
+        }
+    stage('Deploy sh') {
             steps {
                 sh 'py.test --alluredir=allure-results -s -q'
             }
